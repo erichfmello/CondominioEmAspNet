@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using VirtualDoormanAspNet.Models;
+using VirtualDoormanAspNet.Services;
 
 namespace VirtualDoormanAspNet
 {
@@ -38,9 +39,8 @@ namespace VirtualDoormanAspNet
 
             services.AddDbContext<VirtualDoormanAspNetContext>(option => option.UseMySql(Configuration.GetConnectionString("VirtualDoormanAspNetContext"), builder => builder.MigrationsAssembly("VirtualDoormanAspNet")));
 
-            /*
-            services.AddDbContext<VirtualDoormanAspNetContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("VirtualDoormanAspNetContext")));*/
+            services.AddScoped<ResidentialService>();
+            services.AddScoped<ApartmentService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

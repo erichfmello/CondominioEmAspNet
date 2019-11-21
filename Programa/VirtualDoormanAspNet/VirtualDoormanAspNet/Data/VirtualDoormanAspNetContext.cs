@@ -26,6 +26,7 @@ namespace VirtualDoormanAspNet.Models
         {
             modelBuilder.Entity<RentalModel>().HasKey(c => new { c.Cnpj, c.Description });
             modelBuilder.Entity<ApartmentPeople>().HasKey(c => new { c.Apartment, c.Cpf });
+            modelBuilder.Entity<Apartment>().HasKey(c => new { c.ApartmentNumber, c.Block });
         }
     }
 }

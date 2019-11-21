@@ -1,11 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace VirtualDoormanAspNet.Models
 {
     public class Apartment
     {
-        [Key]
         public int ApartmentNumber { get; set; }
         public int Floor { get; set; }
         public int Final { get; set; }

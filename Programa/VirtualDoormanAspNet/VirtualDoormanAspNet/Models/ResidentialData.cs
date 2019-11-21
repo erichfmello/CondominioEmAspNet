@@ -6,11 +6,22 @@ namespace VirtualDoormanAspNet.Models
     public class ResidentialData
     {
         [Key]
+        [Display(Name = "CNPJ")]
         public string Cnpj { get; set; }
+
+        [Display(Name = "Nome do Condomínio")]
         public string Name { get; set; }
+
+        [Display(Name = "Apartamentos no último andar")]
         public int ApartmentLastFloor { get; set; }
+
+        [Display(Name = "Número de andares")]
         public int Floor { get; set; }
+
+        [Display(Name = "Apartamentos por andar")]
         public int ApartmentPerFloor { get; set; }
+
+        [Display(Name = "Número de blocos")]
         public int NumberBlock { get; set; }
 
         public ICollection<Apartment> Apartments { get; set; } = new List<Apartment>();
