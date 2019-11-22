@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using VirtualDoormanAspNet.Services;
 using VirtualDoormanAspNet.Models;
+using VirtualDoormanAspNet.Models.ViewModels;
 
 namespace VirtualDoormanAspNet.Controllers
 {
@@ -21,7 +22,10 @@ namespace VirtualDoormanAspNet.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var residentialData = _residentialService.FindAllData();
+            var residentialAddress = _residentialService.FindAllAddress();
+            var viewModel = new ViewModelResidentialDataAddress{ ResidentialAddress = residentialAddress, ResidentialData = residentialData };
+            return View(viewModel);
         }
 
         [HttpPost]
@@ -49,7 +53,8 @@ namespace VirtualDoormanAspNet.Controllers
 
                             Apartment apartment = new Apartment(apartmentNumber, floor, final, block, residentialData);
                             _apartmentService.Insert(apartment);
-                        } else
+                        }
+                        else
                         {
                             int apartmentNumber = Convert.ToInt32((i + 1).ToString() + ((j + 1) * 10 + k + 1).ToString());
                             int floor = (j + 1);
@@ -59,6 +64,29 @@ namespace VirtualDoormanAspNet.Controllers
                             Apartment apartment = new Apartment(apartmentNumber, floor, final, block, residentialData);
                             _apartmentService.Insert(apartment);
                         }
+                    }
+                }
+
+                for (int j = 0; j < residentialData.ApartmentLastFloor; j++)
+                {
+                    if (residentialData.NumberBlock <= 1)
+                    {
+                        int apartmentNumber = (residentialData.Floor + 1) * 10 + j + 1;
+                        int floor = (residentialData.Floor + 1);
+                        int final = j + 1;
+                        string block = (i + 1).ToString();
+
+                        Apartment apartment = new Apartment(apartmentNumber, floor, final, block, residentialData);
+                        _apartmentService.Insert(apartment);
+                    } else
+                    {
+                        int apartmentNumber = Convert.ToInt32((i + 1).ToString() + ((residentialData.Floor + 1) * 10 + j + 1).ToString());
+                        int floor = (residentialData.Floor + 1);
+                        int final = j + 1;
+                        string block = (i + 1).ToString();
+
+                        Apartment apartment = new Apartment(apartmentNumber, floor, final, block, residentialData);
+                        _apartmentService.Insert(apartment);
                     }
                 }
             }

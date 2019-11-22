@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using VirtualDoormanAspNet.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace VirtualDoormanAspNet.Services
 {
@@ -23,6 +24,16 @@ namespace VirtualDoormanAspNet.Services
             _context.Add(residentialAddress);
 
             _context.SaveChanges();
+        }
+
+        public ResidentialAddress FindAllAddress()
+        {
+            return _context.ResidentialAddress.FirstOrDefault();
+        }
+
+        public ResidentialData FindAllData()
+        {
+            return _context.ResidentialData.FirstOrDefault();
         }
     }
 }
