@@ -26,8 +26,10 @@ namespace VirtualDoormanAspNet.Controllers
         }
 
         public IActionResult Create()
-        {            
-            return View();
+        {
+            var apartments = _apartmentService.FindAll();
+            var viewModel = new ViewModelApartmentPeople { Apartments = apartments };
+            return View(viewModel);
         }
     }
 }

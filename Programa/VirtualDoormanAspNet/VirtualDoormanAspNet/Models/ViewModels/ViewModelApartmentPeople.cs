@@ -8,6 +8,6 @@ namespace VirtualDoormanAspNet.Models.ViewModels
     public class ViewModelApartmentPeople
     {
         public People People { get; set; }
-        public ICollection<int> Apartments { get; set; }
+        public ICollection<Apartment> Apartments { get; set; }
     }
 }

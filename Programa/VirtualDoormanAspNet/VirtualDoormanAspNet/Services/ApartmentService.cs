@@ -20,5 +20,10 @@ namespace VirtualDoormanAspNet.Services
             _context.Add(apartment);
             _context.SaveChanges();
         }
+
+        public List<Apartment> FindAll()
+        {
+            return _context.Apartment.OrderBy(x => x.ApartmentNumber).ToList();
+        }
     }
 }

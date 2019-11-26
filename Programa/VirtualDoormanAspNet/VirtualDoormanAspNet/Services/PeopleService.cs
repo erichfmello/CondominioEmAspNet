@@ -19,16 +19,5 @@ namespace VirtualDoormanAspNet.Services
         {
             return _context.People.ToList();
         }
-
-        public List<int> AllApartments()
-        {
-            List<int> apartments = new List<int>();
-            foreach(var items in _context.Apartment)
-            {
-                apartments.Add(items.ApartmentNumber);
-            }
-
-            return apartments;
-        }
     }
 }
