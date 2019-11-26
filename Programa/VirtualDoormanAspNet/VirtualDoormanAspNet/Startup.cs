@@ -41,6 +41,7 @@ namespace VirtualDoormanAspNet
 
             services.AddScoped<ResidentialService>();
             services.AddScoped<ApartmentService>();
+            services.AddScoped<PeopleService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

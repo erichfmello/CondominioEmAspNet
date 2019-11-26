@@ -36,3 +36,5 @@ C:\Erich\Faculdade\CondominioEmC#\Programa\VirtualDoormanAspNet\VirtualDoormanAs
 C:\Erich\Faculdade\CondominioEmC#\Programa\VirtualDoormanAspNet\VirtualDoormanAspNet\obj\Debug\netcoreapp2.1\Razor\Views\ResidentialDatas\Details.g.cshtml.cs
 C:\Erich\Faculdade\CondominioEmC#\Programa\VirtualDoormanAspNet\VirtualDoormanAspNet\obj\Debug\netcoreapp2.1\Razor\Views\ResidentialDatas\Edit.g.cshtml.cs
 C:\Erich\Faculdade\CondominioEmC#\Programa\VirtualDoormanAspNet\VirtualDoormanAspNet\obj\Debug\netcoreapp2.1\Razor\Views\ResidentialDatas\Index.g.cshtml.cs
+C:\Erich\Faculdade\CondominioEmC#\Programa\VirtualDoormanAspNet\VirtualDoormanAspNet\obj\Debug\netcoreapp2.1\Razor\Views\Peoples\Index.g.cshtml.cs
+C:\Erich\Faculdade\CondominioEmC#\Programa\VirtualDoormanAspNet\VirtualDoormanAspNet\obj\Debug\netcoreapp2.1\Razor\Views\Peoples\Create.g.cshtml.cs
