@@ -26,7 +26,7 @@ namespace VirtualDoormanAspNet.Models
 
         public ApartmentPeople ApartmentPeople { get; set; }
 
-        [Display(Name = "Apartamentos")]
+        [Display(Name = "Apartamento")]
         public int ApartmentNumber { get; set; }
 
         public People()

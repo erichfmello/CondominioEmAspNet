@@ -21,6 +21,9 @@
                 @Html.DisplayNameFor(model => model.Name)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.ApartmentNumber)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.Email)
             </th>
             <th>
@@ -32,19 +35,22 @@
     <tbody>
         @foreach (var items in Model)
         {
-            <tr>
-                <td><i class="fa fa-pencil"></i></td>
-                <td>
-                    @Html.DisplayFor(modelItem => items.Name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => items.Email)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => items.Cpf)
-                </td>
-                <td><i class="fa fa-trash"></i></td>
-            </tr>
+        <tr>
+            <td><i class="fa fa-pencil"></i></td>
+            <td>
+                @Html.DisplayFor(modelItem => items.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => items.ApartmentNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => items.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => items.Cpf)
+            </td>
+            <td><i class="fa fa-trash"></i></td>
+        </tr>
         }
     </tbody>
 </table> 

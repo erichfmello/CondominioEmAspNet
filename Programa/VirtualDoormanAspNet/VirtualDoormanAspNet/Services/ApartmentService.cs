@@ -25,5 +25,16 @@ namespace VirtualDoormanAspNet.Services
         {
             return _context.Apartment.OrderBy(x => x.ApartmentNumber).ToList();
         }
+
+        public Apartment FindByApartmentNumber(int apartmentNumber)
+        {
+            return _context.Apartment.FirstOrDefault(obj => obj.ApartmentNumber == apartmentNumber);
+        }
+
+        public void Update(Apartment apartment)
+        {
+            _context.Update(apartment);
+            _context.SaveChanges();
+        }
     }
 }

@@ -19,5 +19,11 @@ namespace VirtualDoormanAspNet.Services
         {
             return _context.People.ToList();
         }
+
+        public void Insert(People people)
+        {
+            _context.Add(people);
+            _context.SaveChanges();
+        }
     }
 }
