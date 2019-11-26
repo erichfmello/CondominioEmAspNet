@@ -13,6 +13,8 @@ namespace VirtualDoormanAspNet.Models
         public string PhoneNumber { get; set; }
         public string Email { get; set; }
 
+        public ApartmentPeople ApartmentPeople { get; set; }
+
         public People()
         {
         }

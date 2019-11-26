@@ -10,6 +10,7 @@ namespace VirtualDoormanAspNet.Models
         public string Block { get; set; }
 
         public ResidentialData ResidentialData { get; set; }
+        public ApartmentPeople ApartmentPeople { get; set; }
 
         public Apartment()
         {
